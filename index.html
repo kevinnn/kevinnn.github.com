@@ -5,22 +5,19 @@
   
   <title>Paladin</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Paladin">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Paladin">
-<meta property="og:description">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Paladin">
-<meta name="twitter:description">
   
     <link rel="alternative" href="/atom.xml" title="Paladin" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <div id="container">
@@ -83,11 +80,11 @@
 					<nav class="header-nav">
 						<div class="social">
 							
-								<a class="github" target="_blank" href="/#" title="github">github</a>
+								<a class="github" target="_blank" href="#" title="github">github</a>
 					        
-								<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
 					        
-								<a class="mail" target="_blank" href="/#" title="mail">mail</a>
+								<a class="mail" target="_blank" href="#" title="mail">mail</a>
 					        
 						</div>
 					</nav>
@@ -137,11 +134,11 @@
 			<nav class="header-nav">
 				<div class="social">
 					
-						<a class="github" target="_blank" href="/#" title="github">github</a>
+						<a class="github" target="_blank" href="#" title="github">github</a>
 			        
-						<a class="weibo" target="_blank" href="/#" title="weibo">weibo</a>
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
 			        
-						<a class="mail" target="_blank" href="/#" title="mail">mail</a>
+						<a class="mail" target="_blank" href="#" title="mail">mail</a>
 			        
 				</div>
 			</nav>
@@ -153,8 +150,8 @@
     <article id="post-hadoop环境配置" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/10/hadoop环境配置/" class="article-date">
-  	<time datetime="2016-12-10T09:07:43.000Z" itemprop="datePublished">2016-12-10</time>
+      <a href="/2016/10/22/hadoop环境配置/" class="article-date">
+  	<time datetime="2016-10-22T08:38:28.000Z" itemprop="datePublished">2016-10-22</time>
 </a>
     </div>
   
@@ -167,7 +164,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2016/12/10/hadoop环境配置/">Hadoop环境配置</a>
+      <a class="article-title" href="/2016/10/22/hadoop环境配置/">Hadoop环境配置</a>
     </h1>
   
 
@@ -181,7 +178,7 @@
 <p>Hadoop2.7.2配置会遇到的问题是.NativeCodeLoader: Unable to load native-hadoop library for your platform… using builtin-java classes where applicable<br>此时的原因是 native Hadoop library was actually compiled on 32 bit.</p>
 <h2 id="按照实验楼的步骤进行配置">按照实验楼的步骤进行配置</h2><p>注意：<br>MAC环境下<br>配置hadoop-env.sh</p>
 <p>在Hadoop-&gt;conf目录下，找到hadoop-env.sh，打开编辑进行如下设置：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">8.0</span>_66.jdk/Contents/Home（去掉注释）</span><br><span class="line"></span><br><span class="line">export HADOOP_HEAPSIZE=<span class="number">2000</span>（去掉注释）</span><br><span class="line"></span><br><span class="line">export HADOOP_OPTS=”-Djava<span class="class">.security</span><span class="class">.krb5</span><span class="class">.realm</span>=OX<span class="class">.AC</span><span class="class">.UK</span> -Djava<span class="class">.security</span><span class="class">.krb5</span><span class="class">.kdc</span>=kdc0<span class="class">.ox</span><span class="class">.ac</span><span class="class">.uk</span>:kdc1<span class="class">.ox</span><span class="class">.ac</span><span class="class">.uk</span>”（去掉注释）</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.<span class="number">8.0</span>_66.jdk/Contents/Home（去掉注释）</div><div class="line"></div><div class="line">export HADOOP_HEAPSIZE=<span class="number">2000</span>（去掉注释）</div><div class="line"></div><div class="line">export HADOOP_OPTS=”-Djava<span class="selector-class">.security</span><span class="selector-class">.krb5</span><span class="selector-class">.realm</span>=OX<span class="selector-class">.AC</span><span class="selector-class">.UK</span> -Djava<span class="selector-class">.security</span><span class="selector-class">.krb5</span><span class="selector-class">.kdc</span>=kdc0<span class="selector-class">.ox</span><span class="selector-class">.ac</span><span class="selector-class">.uk</span>:kdc1<span class="selector-class">.ox</span><span class="selector-class">.ac</span><span class="selector-class">.uk</span>”（去掉注释）</div></pre></td></tr></table></figure>
 <h2 id="CentOS_64bit安装Hadoop2-2-0中出现文件编译位数异常">CentOS 64bit安装Hadoop2.2.0中出现文件编译位数异常</h2><p>在安装hadoop2.2.0过程中出现如下异常：Unable to load native-hadoop library for your platform… using builtin-java classes where applicable</p>
 <p>图片描述信息</p>
 <p>通过分析是由于lib/native目录中有些文件是在32位编译，无法适应CentOS 64位环境造成</p>
@@ -190,15 +187,83 @@
 <p>重新编译hadoop，然后重新部署<br>暂时办法是修改配置，忽略有问题的文件</p>
 <h2 id="hadoop读写文件命令">hadoop读写文件命令</h2><p>编写好的Read.java文件, 例子文件1.txt： </p>
 <p>1.建立目录class</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hadoop fs -mkdir /<span class="class"><span class="keyword">class</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hadoop fs -mkdir /<span class="class"><span class="keyword">class</span></span></div></pre></td></tr></table></figure>
 <p>2.查看目录</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hadoop <span class="built_in">fs</span> -ls /</span><br></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hadoop <span class="built_in">fs</span> -ls /</div></pre></td></tr></table></figure>
 <p>3.把例子文件上传到hdfs的文件夹中,并查看</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$ </span>hadoop fs -copyFromLocal <span class="number">1</span>.txt /<span class="class"><span class="keyword">class</span>/1.<span class="title">txt</span></span></span><br><span class="line"></span><br><span class="line"><span class="variable">$ </span>hadoop fs -ls /<span class="class"><span class="keyword">class</span></span></span><br></pre></td></tr></table></figure>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hadoop fs -copyFromLocal <span class="number">1</span>.txt /<span class="class"><span class="keyword">class</span>/1.<span class="title">txt</span></span></div><div class="line"></div><div class="line">$ hadoop fs -ls /<span class="class"><span class="keyword">class</span></span></div></pre></td></tr></table></figure>
 <p>4.配置本地环境,加入对HADOOP_CLASPATH变量值</p>
-<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ vim <span class="regexp">/usr/</span>local<span class="regexp">/hadoop/</span>etc<span class="regexp">/hadoop/</span>hadoop-env.sh</span><br><span class="line"></span><br><span class="line">export HADOOP_CLASSPATH=<span class="regexp">/usr/</span>local<span class="regexp">/hadoop/</span><span class="keyword">class</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight gradle"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ vim <span class="regexp">/usr/</span>local<span class="regexp">/hadoop/</span>etc<span class="regexp">/hadoop/</span>hadoop-env.sh</div><div class="line"></div><div class="line">export HADOOP_CLASSPATH=<span class="regexp">/usr/</span>local<span class="regexp">/hadoop/</span><span class="keyword">class</span></div></pre></td></tr></table></figure>
 <p>5.编译过程，因为较新的 2.X 版本中，已经没有 hadoop-core*.jar 这个文件，因此编辑和打包自己的 MapReduce 程序与旧版本有所不同。<br>基本命令如下：</p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ javac read<span class="class">.java</span></span><br><span class="line">$ jar -cvf read<span class="class">.jar</span> ./demo<span class="class">.class</span></span><br><span class="line">$ hadoop jar read<span class="class">.jar</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//使用编译代码read读取文件</span></span><br><span class="line">$ hadoop read /class/<span class="number">1</span>.txt</span><br></pre></td></tr></table></figure>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$ javac read<span class="selector-class">.java</span></div><div class="line">$ jar -cvf read<span class="selector-class">.jar</span> ./demo<span class="selector-class">.class</span></div><div class="line">$ hadoop jar read<span class="selector-class">.jar</span></div><div class="line"></div><div class="line"><span class="comment">//使用编译代码read读取文件</span></div><div class="line">$ hadoop read /class/<span class="number">1</span>.txt</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-unix网路编程" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/09/12/unix网路编程/" class="article-date">
+  	<time datetime="2016-09-12T10:54:43.000Z" itemprop="datePublished">2016-09-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/09/12/unix网路编程/">Unix网络编程</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="准备:">准备:</h4><ol>
+<li><p>环境配置 </p>
+<p><a href="http://blog.csdn.net/liutianshx2012/article/details/46005597" target="_blank" rel="external">http://blog.csdn.net/liutianshx2012/article/details/46005597</a></p>
+</li>
+<li><p>./configure, gcc与make </p>
+ <figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="number">1.</span>&gt;./configure 这一步一般用来生成 Makefile，为下一步的编译做准备.</div><div class="line"><span class="number">2.</span>gcc是编译一个文件，<span class="built_in">make</span>是编译多个源文件的工程文件的工具。</div><div class="line"><span class="number">3.</span><span class="built_in">make</span>是一个命令工具，是一个解释makefile中指令的命令工具，一般来说，大多数的IDE都有这个命令，比如：Delphi的<span class="built_in">make</span>,Linux下GNU的<span class="built_in">make</span>。可见，makefile都成为了一种在工程方面的编译方法。</div><div class="line"><span class="number">4.</span><span class="built_in">make</span>就是按照makefile脚本对整个项目的各个文件进行分别编译和链接,makefile基本上就是<span class="string">"目标"</span>(target),<span class="string">"关连"</span>(dependencies)和<span class="string">"动作(action)"</span>三者所组成的脚本。</div><div class="line"><span class="number">5.</span><span class="built_in">make</span> 可以说是一个批处理程序，它可以自动编译多个文件。当然写好的脚本是前提。<span class="built_in">MAKE</span>是运用GCC去编译文件的</div><div class="line"><span class="number">6.</span>&gt;./ &amp; 后台执行程序， &gt;jobs 查看后台进程</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>Mac OS X EL capitan 10.11 对 /usr/lib 的读写权限问题</p>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">开机按住Command＋R，进入恢复模式，打开terminal 输入</div><div class="line">&gt;csrutil <span class="keyword">disable</span></div><div class="line">&gt;reboot <span class="comment">//重启</span></div></pre></td></tr></table></figure>
+</li>
+</ol>
+<ol>
+<li><p>执行写好的C文件</p>
+<figure class="highlight smalltalk"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">#include</span> <span class="comment">"../../Inc/unp.h"</span></div><div class="line"></div><div class="line"><span class="string">$ </span>cc -o daytimeclient daytimeclient.c -lunp</div><div class="line"></div><div class="line"><span class="string">$ </span>./daytimeserver &amp;</div><div class="line"></div><div class="line"><span class="string">$ </span>jobs</div></pre></td></tr></table></figure>
+</li>
+</ol>
 
       
     </div>
@@ -227,7 +292,7 @@
   
     <div class="article-meta">
       <a href="/2015/07/30/关于近期和未来的思考/" class="article-date">
-  	<time datetime="2015-07-30T08:21:39.000Z" itemprop="datePublished">2015-07-30</time>
+  	<time datetime="2015-07-30T05:35:06.000Z" itemprop="datePublished">2015-07-30</time>
 </a>
     </div>
   
@@ -285,11 +350,11 @@
 
 
   
-    <article id="post-lpthw学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-pythonchallenge" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/07/28/lpthw学习笔记/" class="article-date">
-  	<time datetime="2015-07-28T05:33:22.000Z" itemprop="datePublished">2015-07-28</time>
+      <a href="/2014/10/13/pythonchallenge/" class="article-date">
+  	<time datetime="2014-10-13T10:42:32.000Z" itemprop="datePublished">2014-10-13</time>
 </a>
     </div>
   
@@ -302,7 +367,82 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2015/07/28/lpthw学习笔记/">Lpthw学习记录</a>
+      <a class="article-title" href="/2014/10/13/pythonchallenge/">PythonChallenge</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1">1</h3><pre><code>import string
+
+str = <span class="string">"wukun"</span>
+<span class="title">table = string.maketrans(a,b)</span>
+print str.translate(table) 
+</code></pre><p>maketrans函数将字符串从a替换到b,并赋值到转换表table.</p>
+<p>translate方法利用转换表转换实例.</p>
+<h3 id="2">2</h3><pre><code>import re
+
+f = <span class="function"><span class="title">open</span><span class="params">(<span class="string">'2.txt'</span>, <span class="string">'r'</span>)</span></span>
+str = f.<span class="function"><span class="title">read</span><span class="params">()</span></span>
+res = re.<span class="function"><span class="title">findall</span><span class="params">(r<span class="string">"[a-zA-Z]"</span>, str)</span></span>
+print <span class="string">" "</span>.<span class="function"><span class="title">join</span><span class="params">(res)</span></span>
+</code></pre><p>文件打开读取方法</p>
+<p>正则表达式r’abc’使用原始字符串</p>
+<h3 id="3">3</h3><pre><code>import re
+import urllib2
+
+f = urllib2.<span class="function"><span class="title">urlopen</span><span class="params">(<span class="string">'http://www.pythonchallenge.com/    pc/def/equality.html'</span>)</span></span>
+str = f.<span class="function"><span class="title">read</span><span class="params">()</span></span>
+
+res = re.<span class="function"><span class="title">findall</span><span class="params">(r<span class="string">"[^A-Z][A-Z]{3}([a-z])[A-Z]{3}[^A-    Z]"</span>, str)</span></span>
+print <span class="string">" "</span>.<span class="function"><span class="title">join</span><span class="params">(res)</span></span>.<span class="function"><span class="title">lower</span><span class="params">()</span></span>
+</code></pre><p>urllib2函数：打开http网页内容</p>
+<p>正则表达式(pattern){m,n}：重复模式pattern m~n次</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-lpthw学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/12/lpthw学习笔记/" class="article-date">
+  	<time datetime="2014-09-12T00:10:36.000Z" itemprop="datePublished">2014-09-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/12/lpthw学习笔记/">Lpthw学习记录</a>
     </h1>
   
 
@@ -373,7 +513,7 @@
 </footer>
     </div>
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
 
 <script>
@@ -389,8 +529,8 @@
 		open_in_new: false
 	}
 </script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
-<script src="/js/main.js" type="text/javascript"></script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
 
 
 
